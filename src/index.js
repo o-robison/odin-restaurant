@@ -1,3 +1,4 @@
 import "./styles.css";
+import { drawHome } from "./content.js";
 
-console.log("Fugeddaboudit!");
+drawHome();
