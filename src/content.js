@@ -1,4 +1,5 @@
 const contentDiv = document.querySelector("#content");
+import vesuvioImage from "./vesuvio.jpg";
 
 function resetContent() {
     contentDiv.innerHTML = "";
@@ -12,7 +13,7 @@ export function drawHome() {
     resetContent();
     const heroDiv = document.createElement("div");
     const heroImage = document.createElement("img");
-    heroImage.src = "./vesuvio.jpg";
+    heroImage.src = vesuvioImage;
     heroImage.id = "heroImage";
     heroImage.alt = "An interior shot of the restaurant Nuovo Vesuvio from The Sopranos.";
     const heroCopy = document.createElement("div");
@@ -24,19 +25,6 @@ export function drawHome() {
 }
 
 export function drawReservations() {
-/* <div id="reservations">
-    <form action="#" method="post">
-        <label for="name">Name</label>
-        <input type="text" id="name">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone">
-        <label for="email">Email Address</label>
-        <input type="email" id="email">
-        <label for="date">Requested Date</label>
-        <input type="date" id="date">
-        <button>Request Reservation</button>
-    </form>
-</div> */
     resetContent();
     const resDiv = document.createElement("div");
     const resForm = document.createElement("form");
@@ -66,4 +54,20 @@ export function drawReservations() {
     resForm.appendChild(newButton);
     resDiv.appendChild(resForm);
     appendToContent(resDiv);
+}
+
+export function drawAbout() {
+    /*<div id="location">
+            <img src="img/map.png" alt="The location of Nuovo Vesuvio">
+            <address>
+                5555 Fake St
+                Newark, NJ
+                12345
+            </address>
+            <a href="tel:5555555555">(555)555-5555</a>
+        </div>*/
+    resetContent();
+    const locationDiv = document.createElement("div");
+    locationDiv.id = "location";
+
 }
