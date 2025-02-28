@@ -7,14 +7,147 @@
 </head>
 <body>
     <header>
+        <span id="logo"><button>Nuovo Vesuvio</button></span>
         <nav>
-            <button>Home</button>
             <button>Menu</button>
-            <button>About Us</button>
+            <button>Reservations</button>
+            <button>Location & Hours</button>
+            <button>Our Story</button>
         </nav>
     </header>
     <div id="content">
+        <div id="hero">
+            <img id="heroImage" src="img/hero.jpg" alt="An interior shot of the restaurant Nuovo Vesuvio from The Sopranos">
+            <div id="heroCopy">From Avellino, Italy to Newark, New Jersey: for three generations the Bucco family has been crafting inspired Italian cuisine. Indulge in the rich flavors of the Mediterranean with handcrafted pasta, prime meats, and our imported wines, all served in an elegant, sophisticated setting.</div>
+        </div>
+
+        <div id="reservations">
+            <form action="#" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone">
+                <label for="email">Email Address</label>
+                <input type="email" id="email">
+                <label for="date">Requested Date</label>
+                <input type="date" id="date">
+                <label for="requests">Special Requests</label>
+                <textarea name="requests" id="requests"></textarea>
+                <button>Request Reservation</button>
+            </form>
+        </div>
+
+        <div id="location">
+            <img src="img/map.png" alt="The location of Nuovo Vesuvio">
+            <address>
+                5555 Fake St
+                Newark, NJ
+                12345
+            </address>
+            <a href="tel:5555555555">(555)555-5555</a>
+        </div>
+
+        <div id="about">Angelo Bucco and Concetta Palagonia Bucco, emigrated from Baiano, Avellino, Italy in 1913 and opened the family's first restaurant in 1926. This was Bucco's Vesuvio in the Italian First Ward of Newark, New Jersey. The second Bucco's Vesuvio opened in Bloomfield, New Jersey in the early 1950s.</div>
+
+        <div class="menu-section">
+            <h2>Primi (First Courses)</h2>
+            <div class="menu-item">
+                <div>
+                    <h3>Spaghetti alla Carbonara</h3>
+                    <p>Spaghetti with pancetta, eggs, pecorino cheese, and black pepper.</p>
+                </div>
+                <span>$22</span>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Risotto ai Funghi</h3>
+                    <p>Risotto with wild mushrooms, white wine, and parmesan cheese.</p>
+                </div>
+                <span>$24</span>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Lasagna alla Bolognese</h3>
+                    <p>Layers of pasta, rich Bolognese sauce, and creamy béchamel.</p>
+                </div>
+                <span>$26</span>
+            </div>
+        </div>
         
+        <div class="menu-section">
+            <h2>Secondi (Main Courses)</h2>
+            <div class="menu-item">
+                <div>
+                    <h3>Pollo alla Cacciatora</h3>
+                    <p>Chicken slow-cooked with tomatoes, olives, garlic, and rosemary.</p>
+                </div>
+                <span>$28</span>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Branzino al Forno</h3>
+                    <p>Oven-baked Mediterranean sea bass with lemon, herbs, and olive oil.</p>
+                </div>
+                <span>$32</span>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Bistecca alla Fiorentina</h3>
+                    <p>Grilled T-bone steak, served with roasted potatoes and sautéed spinach.</p>
+                </div>
+                <span>$48</span>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>Dolci (Desserts)</h2>
+            <div class="menu-item">
+                <div>
+                    <h3>Tiramisu</h3>
+                    <p>Classic Italian dessert made with mascarpone, coffee, and cocoa.</p>
+                </div>
+                <span>$10</span>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Gelato alla Vaniglia</h3>
+                    <p>Rich and creamy vanilla gelato served with seasonal berries.</p>
+                </div>
+                <span>$8</span>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Ricotta Cheesecake</h3>
+                    <p>Italian-style cheesecake made with ricotta, served with berry compote.</p>
+                </div>
+                <span>$12</span>
+            </div>
+        </div>
+        
+        <div class="menu-section">
+            <h2>Vini (Wines)</h2>
+            <div class="menu-item">
+                <div>
+                    <h3>Chianti Classico</h3>
+                    <p>Full-bodied red wine with hints of cherries, spice, and oak.</p>
+                </div>
+                <span>$45</span>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Prosecco</h3>
+                    <p>Light and crisp sparkling wine with citrus and floral notes.</p>
+                </div>
+                <span>$38</span>
+            </div>
+            <div class="menu-item">
+                <div>
+                    <h3>Barolo</h3>
+                    <p>Complex and rich red wine with flavors of dark fruit and tobacco.</p>
+                </div>
+                <span>$75</span>
+            </div>
+        </div>
     </div>
 </body>
 </html>
