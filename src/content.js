@@ -1,5 +1,6 @@
 import vesuvioImage from "./vesuvio.jpg";
 import mapImage from "./map.png";
+import { menuData } from "./menuData.js";
 
 const contentDiv = document.querySelector("#content");
 
@@ -86,4 +87,43 @@ export function drawAbout() {
     aboutDiv.textContent = "Angelo Bucco and Concetta Palagonia Bucco, emigrated from Baiano, Avellino, Italy in 1913 and opened the family's first restaurant in 1926. This was Bucco's Vesuvio in the Italian First Ward of Newark, New Jersey. The second Bucco's Vesuvio opened in Bloomfield, New Jersey in the early 1950s.";
     aboutDiv.id = "about";
     appendToContent(aboutDiv);
+}
+
+export function drawMenu() {
+    resetContent();
+    const menuDiv = document.createElement("div");
+    menuDiv.id = "menu";
+    const menuTitle = document.createElement("h2");
+    menuTitle.textContent = "Menu";
+    menuDiv.appendChild(menuTitle);
+
+    for (const section of menuData) {
+        const sectionDiv = document.createElement("div");
+        sectionDiv.classList.add("menuSection");
+        const sectionTitle = document.createElement("h3");
+        sectionTitle.textContent = section.sectionTitle;
+        sectionDiv.appendChild(sectionTitle);
+
+        for (const item of section.items) {
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.add("menuItem");
+
+            const itemTitle = document.createElement("h4");
+            itemTitle.textContent = item.title;
+            itemDiv.appendChild(itemTitle);
+
+            const itemDesc = document.createElement("p");
+            itemDesc.textContent = item.desc;
+            itemDiv.appendChild(itemDesc);
+
+            const itemPrice = document.createElement("span");
+            itemPrice.textContent = item.price;
+            itemDiv.appendChild(itemPrice);
+
+            sectionDiv.appendChild(itemDiv);
+        }
+
+        menuDiv.appendChild(sectionDiv);
+    }
+    appendToContent(menuDiv);
 }
