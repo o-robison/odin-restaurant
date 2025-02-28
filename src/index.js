@@ -1,5 +1,7 @@
 import "./styles.css";
-import { drawHome, drawReservations } from "./content.js";
+import { drawHome, drawReservations, drawLocation, drawAbout } from "./content.js";
 
-drawHome();
-/* drawReservations(); */
+/* drawHome();
+drawReservations();*/
+//drawLocation();
+drawAbout();

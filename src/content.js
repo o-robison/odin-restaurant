@@ -1,5 +1,7 @@
-const contentDiv = document.querySelector("#content");
 import vesuvioImage from "./vesuvio.jpg";
+import mapImage from "./map.png";
+
+const contentDiv = document.querySelector("#content");
 
 function resetContent() {
     contentDiv.innerHTML = "";
@@ -56,18 +58,32 @@ export function drawReservations() {
     appendToContent(resDiv);
 }
 
-export function drawAbout() {
-    /*<div id="location">
-            <img src="img/map.png" alt="The location of Nuovo Vesuvio">
-            <address>
-                5555 Fake St
-                Newark, NJ
-                12345
-            </address>
-            <a href="tel:5555555555">(555)555-5555</a>
-        </div>*/
+export function drawLocation() {
     resetContent();
     const locationDiv = document.createElement("div");
     locationDiv.id = "location";
+    
+    const newImg = document.createElement("img");
+    newImg.src = mapImage;
+    newImg.alt = "The location of Nuovo Vesuvio";
+    locationDiv.appendChild(newImg);
+    
+    const newAddress = document.createElement("address");
+    newAddress.innerHTML = "5555 Fake St </br> Newark, NJ </br> 12345"
+    locationDiv.appendChild(newAddress);
 
+    const newTel = document.createElement("a");
+    newTel.href="tel:+15555555555";
+    newTel.textContent = "(555) 555-5555";
+    locationDiv.appendChild(newTel);
+
+    appendToContent(locationDiv);
+}
+
+export function drawAbout() {
+    resetContent();
+    const aboutDiv = document.createElement("div");
+    aboutDiv.textContent = "Angelo Bucco and Concetta Palagonia Bucco, emigrated from Baiano, Avellino, Italy in 1913 and opened the family's first restaurant in 1926. This was Bucco's Vesuvio in the Italian First Ward of Newark, New Jersey. The second Bucco's Vesuvio opened in Bloomfield, New Jersey in the early 1950s.";
+    aboutDiv.id = "about";
+    appendToContent(aboutDiv);
 }
